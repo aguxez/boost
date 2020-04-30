@@ -37,6 +37,8 @@ defmodule Exboost.Math do
         'libboostnif'
       )
 
+    IO.inspect(path, label: "PATH")
+
     case :erlang.load_nif(path, 0) do
       :ok ->
         IO.inspect({:ok, path})
